@@ -9,7 +9,7 @@
     <meta name="description" content="Every API needs to create a pattern to deal with errors. Everyone knows it, and probably every back-end developer needs to implement some features to give a nic">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ASP.NET Core - Handling API errors smoothly">
-<meta property="og:url" content="http://brunoterragno.com/2018/01/23/asp-net-core-handling-api-error/index.html">
+<meta property="og:url" content="http://brunoterragno.github.io/2018/01/23/asp-net-core-handling-api-error/index.html">
 <meta property="og:site_name" content="Bruno Terragno">
 <meta property="og:description" content="Every API needs to create a pattern to deal with errors. Everyone knows it, and probably every back-end developer needs to implement some features to give a nice feedback to front-end developers (as t">
 <meta property="og:updated_time" content="2018-01-29T21:58:44.247Z">
@@ -75,16 +75,16 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://brunoterragno.com/2018/01/23/asp-net-core-handling-api-error/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://brunoterragno.com/2018/01/23/asp-net-core-handling-api-error/&text=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://brunoterragno.com/2018/01/23/asp-net-core-handling-api-error/&title=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://brunoterragno.com/2018/01/23/asp-net-core-handling-api-error/&is_video=false&description=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=ASP.NET Core - Handling API errors smoothly&body=Check out this article: http://brunoterragno.com/2018/01/23/asp-net-core-handling-api-error/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://brunoterragno.com/2018/01/23/asp-net-core-handling-api-error/&title=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://brunoterragno.com/2018/01/23/asp-net-core-handling-api-error/&title=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://brunoterragno.com/2018/01/23/asp-net-core-handling-api-error/&title=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://brunoterragno.com/2018/01/23/asp-net-core-handling-api-error/&title=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://brunoterragno.com/2018/01/23/asp-net-core-handling-api-error/&name=ASP.NET Core - Handling API errors smoothly&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://brunoterragno.github.io/2018/01/23/asp-net-core-handling-api-error/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://brunoterragno.github.io/2018/01/23/asp-net-core-handling-api-error/&text=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://brunoterragno.github.io/2018/01/23/asp-net-core-handling-api-error/&title=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://brunoterragno.github.io/2018/01/23/asp-net-core-handling-api-error/&is_video=false&description=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=ASP.NET Core - Handling API errors smoothly&body=Check out this article: http://brunoterragno.github.io/2018/01/23/asp-net-core-handling-api-error/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://brunoterragno.github.io/2018/01/23/asp-net-core-handling-api-error/&title=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://brunoterragno.github.io/2018/01/23/asp-net-core-handling-api-error/&title=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://brunoterragno.github.io/2018/01/23/asp-net-core-handling-api-error/&title=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://brunoterragno.github.io/2018/01/23/asp-net-core-handling-api-error/&title=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://brunoterragno.github.io/2018/01/23/asp-net-core-handling-api-error/&name=ASP.NET Core - Handling API errors smoothly&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -158,16 +158,16 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://brunoterragno.com/2018/01/23/asp-net-core-handling-api-error/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://brunoterragno.com/2018/01/23/asp-net-core-handling-api-error/&text=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://brunoterragno.com/2018/01/23/asp-net-core-handling-api-error/&title=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://brunoterragno.com/2018/01/23/asp-net-core-handling-api-error/&is_video=false&description=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=ASP.NET Core - Handling API errors smoothly&body=Check out this article: http://brunoterragno.com/2018/01/23/asp-net-core-handling-api-error/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://brunoterragno.com/2018/01/23/asp-net-core-handling-api-error/&title=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://brunoterragno.com/2018/01/23/asp-net-core-handling-api-error/&title=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://brunoterragno.com/2018/01/23/asp-net-core-handling-api-error/&title=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://brunoterragno.com/2018/01/23/asp-net-core-handling-api-error/&title=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://brunoterragno.com/2018/01/23/asp-net-core-handling-api-error/&name=ASP.NET Core - Handling API errors smoothly&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://brunoterragno.github.io/2018/01/23/asp-net-core-handling-api-error/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://brunoterragno.github.io/2018/01/23/asp-net-core-handling-api-error/&text=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://brunoterragno.github.io/2018/01/23/asp-net-core-handling-api-error/&title=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://brunoterragno.github.io/2018/01/23/asp-net-core-handling-api-error/&is_video=false&description=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=ASP.NET Core - Handling API errors smoothly&body=Check out this article: http://brunoterragno.github.io/2018/01/23/asp-net-core-handling-api-error/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://brunoterragno.github.io/2018/01/23/asp-net-core-handling-api-error/&title=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://brunoterragno.github.io/2018/01/23/asp-net-core-handling-api-error/&title=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://brunoterragno.github.io/2018/01/23/asp-net-core-handling-api-error/&title=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://brunoterragno.github.io/2018/01/23/asp-net-core-handling-api-error/&title=ASP.NET Core - Handling API errors smoothly"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://brunoterragno.github.io/2018/01/23/asp-net-core-handling-api-error/&name=ASP.NET Core - Handling API errors smoothly&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
