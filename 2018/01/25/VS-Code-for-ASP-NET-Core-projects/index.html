@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="I’ve been using macOS as my main developer operating system for about 1 year and a half and I have to say, it’s really AWESOME. With Visual Studio Code and ASP.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VS Code for ASP.NET Core projects">
+<meta property="og:url" content="http://brunoterragno.com/2018/01/25/VS-Code-for-ASP-NET-Core-projects/index.html">
+<meta property="og:site_name" content="Bruno Terragno">
+<meta property="og:description" content="I’ve been using macOS as my main developer operating system for about 1 year and a half and I have to say, it’s really AWESOME. With Visual Studio Code and ASP.NET Core, we don’t need to be stuck on W">
+<meta property="og:updated_time" content="2018-01-29T22:10:57.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="VS Code for ASP.NET Core projects">
+<meta name="twitter:description" content="I’ve been using macOS as my main developer operating system for about 1 year and a half and I have to say, it’s really AWESOME. With Visual Studio Code and ASP.NET Core, we don’t need to be stuck on W">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>VS Code for ASP.NET Core projects</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/archives/">All blog&#39;s posts</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/01/23/asp-net-core-handling-api-error/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://brunoterragno.com/2018/01/25/VS-Code-for-ASP-NET-Core-projects/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://brunoterragno.com/2018/01/25/VS-Code-for-ASP-NET-Core-projects/&text=VS Code for ASP.NET Core projects"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://brunoterragno.com/2018/01/25/VS-Code-for-ASP-NET-Core-projects/&title=VS Code for ASP.NET Core projects"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://brunoterragno.com/2018/01/25/VS-Code-for-ASP-NET-Core-projects/&is_video=false&description=VS Code for ASP.NET Core projects"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=VS Code for ASP.NET Core projects&body=Check out this article: http://brunoterragno.com/2018/01/25/VS-Code-for-ASP-NET-Core-projects/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://brunoterragno.com/2018/01/25/VS-Code-for-ASP-NET-Core-projects/&title=VS Code for ASP.NET Core projects"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://brunoterragno.com/2018/01/25/VS-Code-for-ASP-NET-Core-projects/&title=VS Code for ASP.NET Core projects"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://brunoterragno.com/2018/01/25/VS-Code-for-ASP-NET-Core-projects/&title=VS Code for ASP.NET Core projects"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://brunoterragno.com/2018/01/25/VS-Code-for-ASP-NET-Core-projects/&title=VS Code for ASP.NET Core projects"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://brunoterragno.com/2018/01/25/VS-Code-for-ASP-NET-Core-projects/&name=VS Code for ASP.NET Core projects&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Editor-config-settings"><span class="toc-number">1.</span> <span class="toc-text">Editor config settings</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Connecting-to-a-database"><span class="toc-number">2.</span> <span class="toc-text">Connecting to a database</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Running-multiple-projects"><span class="toc-number">3.</span> <span class="toc-text">Running multiple projects</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        VS Code for ASP.NET Core projects
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Bruno Terragno</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-01-26T01:29:08.000Z" itemprop="datePublished">2018-01-25</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>I’ve been using macOS as my main developer operating system for about 1 year and a half and I have to say, it’s really AWESOME. With Visual Studio Code and ASP.NET Core, we don’t need to be stuck on Windows (even though some people really like it).</p>
+<p>After some months working on a really big project with ASP.NET Core, I learned some interesting things that I would like to share. They are a bunch of settings that are quite useful when developing with Visual Studio Code.</p>
+<p>Note: You should put there configs in .vscode/.settings.json file</p>
+<h3 id="Editor-config-settings"><a href="#Editor-config-settings" class="headerlink" title="Editor config settings"></a>Editor config settings</h3><blockquote>
+<p>They make your code as beautiful as inside Visual Studio Professional Edition</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"csharpfixformat.style.braces.onSameLine"</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">"csharpfixformat.style.spaces.beforeParenthesis"</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">"editor.tabSize"</span>: <span class="number">4</span>,</span><br><span class="line">  <span class="attr">"csharp.format.enable"</span>: <span class="literal">false</span>,</span><br><span class="line">  // if your solution has LOT of projects</span><br><span class="line">  "omnisharp.projectLoadTimeout": 10000</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Connecting-to-a-database"><a href="#Connecting-to-a-database" class="headerlink" title="Connecting to a database"></a>Connecting to a database</h3><blockquote>
+<p>We don’t need management studio (when doing simple things)</p>
+</blockquote>
+<p>If you want do Query database inside VSCode you can add <a href="https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql" target="_blank" rel="noopener">this extension</a> and add the connections to your settings file</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"mssql.connections"</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"server"</span>: <span class="string">"localhost"</span>,</span><br><span class="line">      <span class="attr">"database"</span>: <span class="string">"some_database_dev"</span>,</span><br><span class="line">      <span class="attr">"authenticationType"</span>: <span class="string">"SqlLogin"</span>,</span><br><span class="line">      <span class="attr">"user"</span>: <span class="string">"SA"</span>,</span><br><span class="line">      <span class="attr">"password"</span>: <span class="string">"YOUR_INSECURE_PASS"</span>,</span><br><span class="line">      <span class="attr">"emptyPasswordInput"</span>: <span class="literal">false</span>,</span><br><span class="line">      <span class="attr">"savePassword"</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">"profileName"</span>: <span class="string">"LocalhostDatabase"</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Running-multiple-projects"><a href="#Running-multiple-projects" class="headerlink" title="Running multiple projects"></a>Running multiple projects</h3><blockquote>
+<p>It’s easier than in Visual Studio Professional</p>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"compounds"</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"name"</span>: <span class="string">"Run All"</span>,</span><br><span class="line">      <span class="attr">"configurations"</span>: [</span><br><span class="line">        <span class="string">"Launch A"</span>,</span><br><span class="line">        <span class="string">"Launch B"</span>,</span><br><span class="line">        <span class="string">"Launch C"</span>,</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>These settings are simple but they can be very useful in your code routine :)</p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/archives/">All blog&#39;s posts</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Editor-config-settings"><span class="toc-number">1.</span> <span class="toc-text">Editor config settings</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Connecting-to-a-database"><span class="toc-number">2.</span> <span class="toc-text">Connecting to a database</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Running-multiple-projects"><span class="toc-number">3.</span> <span class="toc-text">Running multiple projects</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://brunoterragno.com/2018/01/25/VS-Code-for-ASP-NET-Core-projects/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://brunoterragno.com/2018/01/25/VS-Code-for-ASP-NET-Core-projects/&text=VS Code for ASP.NET Core projects"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://brunoterragno.com/2018/01/25/VS-Code-for-ASP-NET-Core-projects/&title=VS Code for ASP.NET Core projects"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://brunoterragno.com/2018/01/25/VS-Code-for-ASP-NET-Core-projects/&is_video=false&description=VS Code for ASP.NET Core projects"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=VS Code for ASP.NET Core projects&body=Check out this article: http://brunoterragno.com/2018/01/25/VS-Code-for-ASP-NET-Core-projects/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://brunoterragno.com/2018/01/25/VS-Code-for-ASP-NET-Core-projects/&title=VS Code for ASP.NET Core projects"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://brunoterragno.com/2018/01/25/VS-Code-for-ASP-NET-Core-projects/&title=VS Code for ASP.NET Core projects"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://brunoterragno.com/2018/01/25/VS-Code-for-ASP-NET-Core-projects/&title=VS Code for ASP.NET Core projects"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://brunoterragno.com/2018/01/25/VS-Code-for-ASP-NET-Core-projects/&title=VS Code for ASP.NET Core projects"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://brunoterragno.com/2018/01/25/VS-Code-for-ASP-NET-Core-projects/&name=VS Code for ASP.NET Core projects&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Bruno Terragno
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/archives/">All blog&#39;s posts</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-113160556-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
