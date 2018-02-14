@@ -11,11 +11,11 @@
 <meta property="og:title" content="VS Code for ASP.NET Core projects">
 <meta property="og:url" content="http://brunoterragno.github.io/2018/01/25/VS-Code-for-ASP-NET-Core-projects/index.html">
 <meta property="og:site_name" content="Bruno Terragno">
-<meta property="og:description" content="I’ve been using macOS as my main developer operating system for about 1 year and a half and I have to say, it’s really AWESOME. With Visual Studio Code and ASP.NET Core, we don’t need to be stuck on W">
-<meta property="og:updated_time" content="2018-01-29T22:10:57.000Z">
+<meta property="og:description" content="I’ve been using macOS as my main developer operating system for about 1 year and a half and I have to say, it’s really AWESOME. With Visual Studio Code and ASP.NET Core, we don’t need to be restricted">
+<meta property="og:updated_time" content="2018-02-14T19:38:29.474Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VS Code for ASP.NET Core projects">
-<meta name="twitter:description" content="I’ve been using macOS as my main developer operating system for about 1 year and a half and I have to say, it’s really AWESOME. With Visual Studio Code and ASP.NET Core, we don’t need to be stuck on W">
+<meta name="twitter:description" content="I’ve been using macOS as my main developer operating system for about 1 year and a half and I have to say, it’s really AWESOME. With Visual Studio Code and ASP.NET Core, we don’t need to be restricted">
     
     
         
@@ -123,7 +123,7 @@
   
 
   <div class="content" itemprop="articleBody">
-    <p>I’ve been using macOS as my main developer operating system for about 1 year and a half and I have to say, it’s really AWESOME. With Visual Studio Code and ASP.NET Core, we don’t need to be stuck on Windows (even though some people really like it).</p>
+    <p>I’ve been using macOS as my main developer operating system for about 1 year and a half and I have to say, it’s really AWESOME. With Visual Studio Code and ASP.NET Core, we don’t need to be restricted to Windows (even though some people really like it).</p>
 <p>After some months working on a really big project with ASP.NET Core, I learned some interesting things that I would like to share. They are a bunch of settings that are quite useful when developing with Visual Studio Code.</p>
 <p>Note: You should put there configs in .vscode/.settings.json file</p>
 <h3 id="Editor-config-settings"><a href="#Editor-config-settings" class="headerlink" title="Editor config settings"></a>Editor config settings</h3><blockquote>
@@ -138,7 +138,7 @@
 <h3 id="Running-multiple-projects"><a href="#Running-multiple-projects" class="headerlink" title="Running multiple projects"></a>Running multiple projects</h3><blockquote>
 <p>It’s easier than in Visual Studio Professional</p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"compounds"</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"name"</span>: <span class="string">"Run All"</span>,</span><br><span class="line">      <span class="attr">"configurations"</span>: [</span><br><span class="line">        <span class="string">"Launch A"</span>,</span><br><span class="line">        <span class="string">"Launch B"</span>,</span><br><span class="line">        <span class="string">"Launch C"</span>,</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"compounds"</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"name"</span>: <span class="string">"Run All"</span>,</span><br><span class="line">      <span class="attr">"configurations"</span>: [<span class="string">"Launch A"</span>, <span class="string">"Launch B"</span>, <span class="string">"Launch C"</span>]</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>These settings are simple but they can be very useful in your code routine :)</p>
 
   </div>
